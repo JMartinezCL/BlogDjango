@@ -1,4 +1,10 @@
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .page-header {
     background-color: #C5CBF5;
     margin-top: 0;
@@ -16,10 +22,10 @@
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
+/*h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
 }
-
+*/
 .date {
     float: center;
     color: #828282;
@@ -50,11 +56,15 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
+.main {
+  flex: 1;
+}
+
 .footer {
   /*background-image: url("https://i.stack.imgur.com/AZ2Xw.png");*/
   background-color: #C5CBF5;
   background-position: center center; 
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 300px;
+  min-height: 300px;   
 }

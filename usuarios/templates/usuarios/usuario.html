@@ -1,0 +1,82 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="col-sm-10 offset-sm-2 my-4" >
+	<div class="card">
+		<div class="card-header">
+			Formulario de Registro
+		</div>
+		<form method="post" form-inline justify-content-center">
+		    {% csrf_token %}
+		    <!--{{ form.as_p }} -->
+		    <div class="col-sm-12 offset-sm-2 my-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<label>Nombre de usuario</label>
+			    		<input class="form-control" type="text" name="username" required>  
+			    		<ul>  
+				    		<li><small class="form-text text-muted">150 caracteres como maximo, Solo debe contener letras, digitos y @/./+/-/_.</small></li>  
+			    		</ul>
+			    	</div>
+			    </div>	
+			</div>
+			<div class="col-sm-12 offset-sm-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<label>Nombre</label>
+			    		<input class="form-control" type="text" name="first_name" required="">    		
+			    	</div>
+			    </div>	
+			</div>
+			<div class="col-sm-12 offset-sm-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<label>Apellidos</label>
+			    		<input class="form-control" type="text" name="last_name" required>    		
+			    	</div>
+			    </div>	
+			</div>
+			<div class="col-sm-12 offset-sm-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<label>Correo Electronico</label>
+			    		<input class="form-control" type="text" name="email" placeholder="example@example.com" required>    		
+			    	</div>
+			    </div>	
+			</div>
+			<div class="col-sm-12 offset-sm-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<label>Contraseña</label>
+			    		<input class="form-control" type="password" name="password1" placeholder="contraseña" required>  
+			    		<ul>
+				    		<li><small class="form-text text-muted">Su contraseña no puede asemejarse tanto a su otra información personal.</small></li>
+				    		<li><small class="form-text text-muted">Su contraseña debe contener al menos 8 caracteres.</small></li>
+				    		<li><small class="form-text text-muted">Su contraseña no puede ser una clave utilizada comunmente.</small></li>
+				    		<li><small class="form-text text-muted">Su contraseña no puede ser completamente numérica.</small></li>
+			    		</ul> 		
+			    	</div>
+			    </div>	
+			</div>
+			<div class="col-sm-12 offset-sm-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<label>Contraseña(confirmación)</label>
+			    		<input class="form-control" type="password" name="password2" placeholder="Para verificar, introduzca la misma contraseña anterior." required>  		
+			    	</div>
+			    </div>	
+			</div>
+			<div class="col-sm-12 offset-sm-2">
+			    <div class="col-md-8 col-md-offset-2">
+			    	<div class="form-group">
+			    		<button type="submit" class="btn btn-primary">Guardar</button>   		
+			    	</div>
+			    </div>	
+			</div>    
+		</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
